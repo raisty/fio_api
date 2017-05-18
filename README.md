@@ -1,41 +1,42 @@
 [![Code Climate](https://codeclimate.com/github/raisty/fio_api.png)](https://codeclimate.com/github/raisty/fio_api)
 [![security](https://hakiri.io/github/raisty/fio_api/master.svg)](https://hakiri.io/github/raisty/fio_api/master)
-= Fio API
+
+# Fio API
 
 This project rocks and uses MIT-LICENSE.
 
 This gem is a wrapper for Fio bank API. Currently Fio API support only data listing, so you can make only a requests to get all your money transaction in some date range.
 
-== Usage
+## Usage
 
-=== Add to your gemfile
+### Add to your gemfile
   gem 'fio_api', git: 'https://github.com/raisty/fio_api', branch: 'master'
 
-=== Setup API token
+### Setup API token
   FioAPI.token = "8JSKJ823DN86YRH87UIRUI2363ND5xcr3"
 
-=== Request transactions in date range 2012-11-05 and 2012-12-26
+### Request transactions in date range 2012-11-05 and 2012-12-26
   list = FioAPI::List.new                                         # Create new listing request
   list.by_date_range(Date.new(2012,11,05), Date.new(2012,12,26))  # Specify listing condition and fetch request
   list.response                                                   # Return deserialized response
 
-=== Request transactions by listing_id and year
+### Request transactions by listing_id and year
   list = FioAPI::List.new
   list.by_listing_id_and_year("43XC6362ASD", 2012)
   list.response
 
-=== Request to set last request id
+### Request to set last request id
   list = FioAPI::List.new
   list.set_last_fetch_id("SHXG738377834")
   list.response
 
-=== Request to set last request date
+### Request to set last request date
   list = FioAPI::List.new
   list.set_last_fetch_date(Date.new(2012,11,05))
   list.response
 
 
-== Contributing to fio_api
+## Contributing to fio_api
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
