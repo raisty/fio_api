@@ -1,5 +1,5 @@
-{<img src="https://secure.travis-ci.org/robinbortlik/fio_api.png?branch=master" alt="Build Status" />}[http://travis-ci.org/robinbortlik/fio_api]
-{<img src="https://codeclimate.com/badge.png" />}[https://codeclimate.com/github/robinbortlik/fio_api]
+[![Code Climate](https://codeclimate.com/github/raisty/fio_api.png)](https://codeclimate.com/github/raisty/fio_api)
+[![security](https://hakiri.io/github/raisty/fio_api/master.svg)](https://hakiri.io/github/raisty/fio_api/master)
 = Fio API
 
 This project rocks and uses MIT-LICENSE.
@@ -9,7 +9,7 @@ This gem is a wrapper for Fio bank API. Currently Fio API support only data list
 == Usage
 
 === Add to your gemfile
-  gem 'fio_api'
+  gem 'fio_api', git: 'https://github.com/raisty/fio_api', branch: 'master'
 
 === Setup API token
   FioAPI.token = "8JSKJ823DN86YRH87UIRUI2363ND5xcr3"
